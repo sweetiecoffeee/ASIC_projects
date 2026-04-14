@@ -1,0 +1,17 @@
+==== Simulation Start ====
+SEED=1
+Chosen day during Week    is "FRI"
+Chosen day during Weekend is "SAT"
+SEED=2
+Chosen day during Week    is "TUE"
+Chosen day during Weekend is "SAT"
+SEED=3
+Chosen day during Week    is "THU"
+Chosen day during Weekend is "SUN"
+SEED=4
+Chosen day during Week    is "MON"
+Chosen day during Weekend is "SAT"
+SEED=5
+Chosen day during Week    is "WED"
+Chosen day during Weekend is "SAT"
+==== Simulation END ====
