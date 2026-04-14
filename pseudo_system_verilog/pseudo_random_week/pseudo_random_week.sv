@@ -1,3 +1,24 @@
+// =======================================================================
+// program Name : test
+// Author       : Kim Daeyeong
+// Date         : 2026-04-14
+//
+// Description  :
+//	A lightweight SystemVerilog project showcasing enum-based modeling
+//	and class abstraction for seeded pseudo-random selection. Emphasizes
+//	reproducibility, clean design, and compatibility with limited 
+//	simulators such as Icarus Verilog.
+//
+// Notes        :
+//	-Typedef enum inside a class is not supported in Icarus verilog.
+//	-Randomization is controlled via $urandom with user-defined seeds.
+//	-'day_to_string' is implemented as a static function as it does
+//	 not rely on object state.	
+//	-Actual SV codes are written below.
+//
+// =======================================================================
+
+
 program test;
 
 	//my_pseudo_code
@@ -62,7 +83,7 @@ program test;
 		$display("Chosen day during Weekend is \"%s\"", days.day_to_string(days.day));
 	end
 
-	////Below codes are for original SystemVerilog
+	////Below codes are for original SystemVerilog which i studied.
 	//class Days;
 	//	typedef enum {SUN, MON, TUE, WED, THU, FRI, SAT} DAYS;
 	//	DAYS queue_day[$];
