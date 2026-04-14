@@ -1,0 +1,6 @@
+Producer puts [1] to mailbox
+Consumer gets [1] from mailbox
+Producer puts [2] to mailbox
+Consumer gets [2] from mailbox
+Producer puts [3] to mailbox
+Consumer gets [3] from mailbox
