@@ -1,0 +1,154 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2009.vpi";
+S_0x57f5017b3dc0 .scope package, "$unit" "$unit" 2 1;
+ .timescale 0 0;
+S_0x57f5017b3f50 .scope module, "test" "test" 3 20;
+ .timescale 0 0;
+C0x57f5017d86f0  .class "MyBusTran" [6]
+   0: "addr", "L32"
+   1: "crc", "L32"
+   2: "data0", "L32"
+   3: "data1", "L32"
+   4: "data2", "L32"
+   5: "data3", "L32"
+ ;
+v0x57f501803fa0_0 .var/cobj "a";
+v0x57f501804080_0 .var/cobj "b";
+v0x57f501804140_0 .var/cobj "c";
+v0x57f501804210_0 .var/cobj "d";
+S_0x57f5018036a0 .scope class, "MyBusTran" "MyBusTran" 3 21, 3 21 0, S_0x57f5017b3f50;
+ .timescale 0 0;
+S_0x57f501803850 .scope autofunction.void, "display" "display" 3 39, 3 39 0, S_0x57f5018036a0;
+ .timescale 0 0;
+v0x57f501803a30_0 .var/cobj "@";
+TD_test.MyBusTran.display ;
+    %load/obj v0x57f501803a30_0;
+    %prop/v 0;
+    %pop/obj 1, 0;
+    %vpi_call/w 3 40 "$display", "Addr    = 0x%08h", S<0,vec4,u32> {1 0 0};
+    %load/obj v0x57f501803a30_0;
+    %prop/v 2;
+    %pop/obj 1, 0;
+    %vpi_call/w 3 41 "$display", "Data[0] = 0x%08h", S<0,vec4,u32> {1 0 0};
+    %load/obj v0x57f501803a30_0;
+    %prop/v 3;
+    %pop/obj 1, 0;
+    %vpi_call/w 3 42 "$display", "Data[1] = 0x%08h", S<0,vec4,u32> {1 0 0};
+    %load/obj v0x57f501803a30_0;
+    %prop/v 4;
+    %pop/obj 1, 0;
+    %vpi_call/w 3 43 "$display", "Data[2] = 0x%08h", S<0,vec4,u32> {1 0 0};
+    %load/obj v0x57f501803a30_0;
+    %prop/v 5;
+    %pop/obj 1, 0;
+    %vpi_call/w 3 44 "$display", "Data[3] = 0x%08h\012", S<0,vec4,u32> {1 0 0};
+    %end;
+S_0x57f501803b10 .scope autofunction.obj, "new" "new" 3 27, 3 27 0, S_0x57f5018036a0;
+ .timescale 0 0;
+v0x57f501803d10_0 .var/cobj "@";
+v0x57f501803dd0_0 .var "a", 31 0;
+v0x57f501803eb0_0 .var "d", 31 0;
+TD_test.MyBusTran.new ;
+    %load/vec4 v0x57f501803dd0_0;
+    %load/obj v0x57f501803d10_0;
+    %store/prop/v 0, 32; Store in logic property addr
+    %pop/obj 1, 0;
+    %load/vec4 v0x57f501803eb0_0;
+    %load/obj v0x57f501803d10_0;
+    %store/prop/v 2, 32; Store in logic property data0
+    %pop/obj 1, 0;
+    %load/vec4 v0x57f501803eb0_0;
+    %load/obj v0x57f501803d10_0;
+    %store/prop/v 3, 32; Store in logic property data1
+    %pop/obj 1, 0;
+    %load/vec4 v0x57f501803eb0_0;
+    %load/obj v0x57f501803d10_0;
+    %store/prop/v 4, 32; Store in logic property data2
+    %pop/obj 1, 0;
+    %load/vec4 v0x57f501803eb0_0;
+    %load/obj v0x57f501803d10_0;
+    %store/prop/v 5, 32; Store in logic property data3
+    %pop/obj 1, 0;
+    %end;
+    .scope S_0x57f5017b3f50;
+T_2 ;
+    %alloc S_0x57f501803b10;
+    %new/cobj C0x57f5017d86f0;
+    %pushi/vec4 5, 0, 32;
+    %pushi/vec4 7, 0, 32;
+    %store/vec4 v0x57f501803eb0_0, 0, 32;
+    %store/vec4 v0x57f501803dd0_0, 0, 32;
+    %store/obj v0x57f501803d10_0;
+    %callf/obj TD_test.MyBusTran.new, S_0x57f501803b10;
+    %load/obj v0x57f501803d10_0;
+    %free S_0x57f501803b10;
+    %store/obj v0x57f501803fa0_0;
+    %alloc S_0x57f501803850;
+    %load/obj v0x57f501803fa0_0;
+    %store/obj v0x57f501803a30_0;
+    %callf/void TD_test.MyBusTran.display, S_0x57f501803850;
+    %free S_0x57f501803850;
+    %alloc S_0x57f501803b10;
+    %new/cobj C0x57f5017d86f0;
+    %pushi/vec4 9, 0, 32;
+    %pushi/vec4 7, 0, 32;
+    %store/vec4 v0x57f501803eb0_0, 0, 32;
+    %store/vec4 v0x57f501803dd0_0, 0, 32;
+    %store/obj v0x57f501803d10_0;
+    %callf/obj TD_test.MyBusTran.new, S_0x57f501803b10;
+    %load/obj v0x57f501803d10_0;
+    %free S_0x57f501803b10;
+    %store/obj v0x57f501804080_0;
+    %alloc S_0x57f501803850;
+    %load/obj v0x57f501804080_0;
+    %store/obj v0x57f501803a30_0;
+    %callf/void TD_test.MyBusTran.display, S_0x57f501803850;
+    %free S_0x57f501803850;
+    %alloc S_0x57f501803b10;
+    %new/cobj C0x57f5017d86f0;
+    %pushi/vec4 11, 0, 32;
+    %pushi/vec4 20, 0, 32;
+    %store/vec4 v0x57f501803eb0_0, 0, 32;
+    %store/vec4 v0x57f501803dd0_0, 0, 32;
+    %store/obj v0x57f501803d10_0;
+    %callf/obj TD_test.MyBusTran.new, S_0x57f501803b10;
+    %load/obj v0x57f501803d10_0;
+    %free S_0x57f501803b10;
+    %store/obj v0x57f501804140_0;
+    %alloc S_0x57f501803850;
+    %load/obj v0x57f501804140_0;
+    %store/obj v0x57f501803a30_0;
+    %callf/void TD_test.MyBusTran.display, S_0x57f501803850;
+    %free S_0x57f501803850;
+    %alloc S_0x57f501803b10;
+    %new/cobj C0x57f5017d86f0;
+    %pushi/vec4 5, 0, 32;
+    %pushi/vec4 15, 0, 32;
+    %store/vec4 v0x57f501803eb0_0, 0, 32;
+    %store/vec4 v0x57f501803dd0_0, 0, 32;
+    %store/obj v0x57f501803d10_0;
+    %callf/obj TD_test.MyBusTran.new, S_0x57f501803b10;
+    %load/obj v0x57f501803d10_0;
+    %free S_0x57f501803b10;
+    %store/obj v0x57f501804210_0;
+    %alloc S_0x57f501803850;
+    %load/obj v0x57f501804210_0;
+    %store/obj v0x57f501803a30_0;
+    %callf/void TD_test.MyBusTran.display, S_0x57f501803850;
+    %free S_0x57f501803850;
+    %end;
+    .thread T_2;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "-";
+    "pseudo_class_arguments.sv";
